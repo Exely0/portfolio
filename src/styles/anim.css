@@ -1,0 +1,154 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fadeOut {
+    animation: fadeOut 1s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(15%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .slideUp {
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(15%);
+    }
+  }
+  
+  .slideDown {
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  /* Combined Animations */
+  .fadeInUp {
+    animation: fadeIn 0.3s ease-in-out, slideUp 0.3s ease-in-out;
+  }
+  
+  .fadeOutDown {
+    animation: fadeOut 0.3s ease-in-out, slideDown 0.3s ease-in-out;
+  }
+
+  /* pour le welcome*/
+  @keyframes fromUpside {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+
+  .fromUpside {
+    animation: fromUpside 0.7s linear;
+  }
+
+
+  /* pour le lorris, portfolio*/
+  @keyframes fromDownside {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  .fromDownside {
+    animation: fromDownside 0.7s linear;
+  }
+  
+  @keyframes translateToTopLeft {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-100%, -100%);
+    }
+  }
+  
+  .toTopLeft {
+    animation: translateToTopLeft 1s linear;
+  }
+
+  @keyframes translateToBottomRight {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(100%, 100%);
+    }
+  }
+
+  .toBottomRight {
+    animation: translateToBottomRight 1s linear;
+  }
+
+  @keyframes infiniteImageScrolling {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1680px);
+    }
+  }
+
+  .infiniteImageScrolling {
+    animation: infiniteImageScrolling 10s linear infinite;
+  }
+
+  @keyframes imageSwap {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes fadeOutIn {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .imageSwap {
+    animation: imageSwap 0.31s linear;
+  }
