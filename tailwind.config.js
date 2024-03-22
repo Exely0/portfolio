@@ -51,6 +51,8 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require("@xpd/tailwind-3dtransforms")
+  ],
 }
 

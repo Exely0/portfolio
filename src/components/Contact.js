@@ -30,7 +30,7 @@ function Contact() {
                   Contact
               </h1>
           </div>
-          <div className=" mt-12 flex flex-col md:flex-row gap-6 h-full items-center justify-center" style={{perspective: "800px"}}>
+          <div className=" mt-12 flex flex-col md:flex-row gap-6 h-full items-center justify-center md:perspective-800">
             {Contacts.map(({name, image, link, text}, index) => (
                 <div key = {index} className="h-60 w-60 relative mb-6 rounded-lg flipcard-container" >
                     <div className={` rounded-lg duration-500 absolute top-0 left-0 w-full h-full bg-white flipcard`} title=" front">

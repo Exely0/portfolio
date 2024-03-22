@@ -1,7 +1,6 @@
 // App.js
 import Section from "./Section";
 import About from "./About";
-import Skills from "./Skills";
 import ProjectsV4 from "./ProjectsV4";
 import Contact from "./Contact";
 import Bookmark from "./Bookmark";

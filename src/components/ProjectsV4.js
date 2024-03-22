@@ -100,9 +100,9 @@ function ProjectsV4() {
 
 
     return (
-        <div className="w-full flex flex-col gap-8 px-10">
+        <div className="w-full flex flex-col gap-8 px-10 py-8">
 
-            <div className=" hidden md:flex justify-center items-center bg-blue -mx-8 mt-8 h-28 ">
+            <div className=" hidden md:flex justify-center items-center bg-blue -mx-8 h-28 ">
                 <h1 className="text-white font-semibold text-4xl text-slate-200">Mes projets</h1>
             </div>
 

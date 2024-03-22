@@ -66,10 +66,6 @@ function About() {
   return (
     <div className=" w-full">
 
-        <div title="character" className=" absolute top-10 left-10 bg-green w-5 h-5">
-
-        </div>
-
         {/*section 1*/}
         <div className="relative h-screen pt-10 md:pt-40 flex flex-col items-center" >
             <div className=" bg-red w-auto px-10 py-4 text-4xl sm:text-5xl text-white md:text-6xl text-center font-semibold" style={{ transform: `translateY(${-5/5*scrollOffset}px)` }}>
