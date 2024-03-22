@@ -1,0 +1,21 @@
+.flipcard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.flipcard-container {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.flipcard-container:hover {
+    transform: rotateY(180deg);
+}
+
+.fp-back {
+    transform: rotateY(180deg);
+}

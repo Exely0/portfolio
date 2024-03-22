@@ -21,10 +21,10 @@ function Welcome() {
 
         <div className=" flex flex-col gap-6 ">
         <div className={` text-6xl font-semibold overflow-hidden`}>
-            <p className="fromUpside">Welcome</p>
+            <p className="fromUpside text-white">Welcome</p>
         </div>
         <div className={` flex text-4xl overflow-hidden`}>
-            <p className="fromDownside">Lorris, Portfolio</p>
+            <p className="fromDownside text-white">Lorris, Portfolio</p>
         </div>
 
         </div>
