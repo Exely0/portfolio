@@ -1,5 +1,6 @@
 import ArrowDown from "../images/arrow-down.png"
 import CV from "../images/CV/cv-lorris.pdf"
+import Bio from "../images/Dessin/Bio.jpg"
 
 import { useState } from "react";
 import { useRef } from "react";
@@ -100,6 +101,11 @@ function About() {
             <a href={CV} download="cv_lorris" style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={` !mt-24 mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:bg-red transition-colors`}>
               Télécharger mon CV
             </a>
+          </div>
+          <div className=" col-[1] row-[1] h-full w-full flex items-end pb-20">
+            <div className=" ">
+              <img alt="illustration" src={Bio}/>
+            </div>
           </div>
         </div>
 
