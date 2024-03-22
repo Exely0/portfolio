@@ -36,7 +36,7 @@ function Section({ isActive, content }) {
 
   return (
     <div className={` bg-blue transition-all flex flex-col ease-in-out duration-300 ${animFlexGrow ? "grow" : "grow-0"} `}>
-      <div className={` fadeInUp p-8 flex h-full ${isContentVisible ? "" : "hidden "} ${animFadeIn  ? "fadeInUp" : ""} ${animFadeOut  ? "fadeOutDown" : ""}`}>
+      <div className={` fadeInUp px-8 flex h-full ${isContentVisible ? "" : "hidden "} ${animFadeIn  ? "fadeInUp" : ""} ${animFadeOut  ? "fadeOutDown" : ""}`}>
         {content}
       </div>
     </div>
