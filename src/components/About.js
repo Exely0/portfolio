@@ -1,4 +1,5 @@
 import ArrowDown from "../images/arrow-down.png"
+import CV from "../images/CV/cv-lorris.pdf"
 
 import { useState } from "react";
 import { useRef } from "react";
@@ -11,7 +12,7 @@ function About() {
     "Je suis étudiant en licence d'informatique depuis 3 ans à l'Université de Limoges.",
     "Il y a de ça 1 an je me suis pris de passion pour le développement web, plus particulièrement le front end.",
     "Alors j'ai commencé à reproduire des maquettes que je trouvais sur Internet.",
-    "J'aspire plus tard à en faire mon métier, et ainsi devenir un développeur web à part entière !",
+    "J'aspire plus tard à en faire mon métier, et ainsi devenir un développeur web !",
   ]
 
   const section2Ref = useRef(null);
@@ -39,11 +40,11 @@ function About() {
     if (scrollOffset < window.innerHeight / 2) {
       return 300;
     }
-    else if (scrollOffset > (window.innerHeight / 2) + 500) {
+    else if (scrollOffset > (window.innerHeight / 2) + 300) {
       return 0;
     }
     else {
-      return ((index+1)*10000)/(scrollOffset - window.innerHeight / 2);
+      return ((index+1)/4 * (300 - (scrollOffset - window.innerHeight/2)))
     }    
   }
 
@@ -89,13 +90,16 @@ function About() {
             </div>
         </div>
         {/*section 2*/}
-        <div ref={section2Ref} className=" bg-white -mx-8 relative h-screen">
-          <div className=" absolute top-28 right-28 w-1/2 space-y-4 tracking-wide">
+        <div ref={section2Ref} className=" bg-white -mx-8 min-h-screen grid grid-cols-[2fr_3fr]">
+          <div className=" col-[2] space-y-6 tracking-wide mt-28 pr-14">
             {stringsSec2.map((str, index) => (
               <div key={index} className=" text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
                 {str}
               </div>
             ))}
+            <a href={CV} download="cv_lorris" style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={` !mt-24 mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:bg-red transition-colors`}>
+              Télécharger mon CV
+            </a>
           </div>
         </div>
 
