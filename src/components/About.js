@@ -90,7 +90,7 @@ function About() {
             </div>
         </div>
         {/*section 2*/}
-        <div ref={section2Ref} className=" bg-white -mx-8 min-h-screen grid grid-cols-[2fr_3fr]">
+        <div ref={section2Ref} className=" bg-white px-8 py-8 md:p-0 -mx-8 min-h-screen md:grid grid-cols-[2fr_3fr]">
           <div className=" col-[2] space-y-6 tracking-wide mt-28 pr-14">
             {stringsSec2.map((str, index) => (
               <div key={index} className=" text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
