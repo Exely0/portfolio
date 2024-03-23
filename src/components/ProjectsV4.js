@@ -115,7 +115,7 @@ function ProjectsV4() {
                     <div onClick={ () => closeDetails()} className={` fixed top-0 left-0 w-full h-full bg-overlay z-10 ${!showOverlay ? "hidden" : ""}`}>
                     </div>
 
-                    <div onClick={ () => showDetails(index)} className=" hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[350px] hover:scale-105 transition-all">
+                    <div onClick={ () => showDetails(index)} className=" hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[350px] hover:scale-105 active:scale-95 transition-all">
                         <div className=" rounded-lg w-full h-2/3">
                             <img src={image} alt="" className=" rounded-lg h-full w-full object-cover "/>
                         </div>
@@ -129,13 +129,19 @@ function ProjectsV4() {
 
                     <div className={` fixed max-h-[650px] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
                         <div className=" flex h-[400px] mb-3">
-                            <div onClick={ () => updateImageIndexValue('down', imageCollection.length)} className="hidden md:block transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => updateImageIndexValue('down', imageCollection.length)} className="hidden md:block grow transition-all bg-white h-full hover:bg-overlay hover:cursor-pointer">
                                 <img alt="arrow left" className=" w-full h-full scale-50" src={leftArrow}/>
                             </div>
-                            <div className=" w-full md:w-[650px] h-full">
-                                <img alt="screenshot" className=" w-full h-full object-cover" src={imageCollection[currentImageIndex]} />
+                            <div className="h-full overflow-hidden md:w-[650px] w-full">
+                                <div className={` h-full flex -z-10 transition-transform duration-200`} style={{ transform: `translateX(-${100*currentImageIndex}%)` }}>
+                                    {imageCollection.map((image, index) => (
+                                    <div key={index} className=" w-full md:w-[650px] shrink-0">
+                                        <img alt="screenshot" className=" w-full h-full object-cover" src={image} />
+                                    </div>
+                                    ))} 
+                                </div>
                             </div>
-                            <div onClick={ () => updateImageIndexValue('up', imageCollection.length)} className="hidden md:block transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => updateImageIndexValue('up', imageCollection.length)} className="hidden grow md:block transition-all bg-white h-full hover:bg-overlay hover:cursor-pointer">
                                 <img alt="arrow right" className=" w-full h-full scale-50" src={rightArrow}/>
                             </div>
                         </div>
