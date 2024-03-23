@@ -127,7 +127,7 @@ function ProjectsV4() {
                         </div>
                     </div>
 
-                    <div className={` fixed max-h-[650px] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
+                    <div className={` fixed max-h-[550px] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
                         <div className=" flex h-[400px] mb-3">
                             <div onClick={ () => updateImageIndexValue('down', imageCollection.length)} className="hidden md:block grow transition-all bg-white h-full hover:bg-overlay hover:cursor-pointer">
                                 <img alt="arrow left" className=" w-full h-full scale-50" src={leftArrow}/>

@@ -6,7 +6,7 @@ import Contact from "./Contact";
 import Bookmark from "./Bookmark";
 import Welcome from "./Welcome";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Fragment } from "react";
 
 const sections = [
@@ -23,8 +23,16 @@ function App() {
     console.log(activeSection);
   };
 
+  const [overflowHidden, setOverflowHidden] = useState(true)
+
+  useEffect(() => { 
+    setTimeout(() => {
+      setOverflowHidden(false)
+    }, 2500);  
+  }, []);
+
   return (
-    <div className="flex flex-col overflow-clip md:flex-row w-full min-h-screen bg-slate-200 tracking-wider text-gray-900 !font-roboto">
+    <div className={`flex flex-col overflow-clip md:flex-row w-full min-h-screen bg-slate-200 tracking-wider text-gray-900 !font-roboto ${overflowHidden ? "h-screen overflow-hidden" : ""}`}>
       
       <Welcome />
       

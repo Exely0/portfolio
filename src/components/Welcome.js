@@ -19,12 +19,12 @@ function Welcome() {
     return (
       <div className={` ${anim ? "fadeOut" : ""} ${hide ? "hidden" : ""} overflow-hidden z-10 absolute top-0 left-0 w-full h-full flex items-center justify-center  bg-gradient-lapislazuli-claret-diag text-slate-200`}>
 
-        <div className=" flex flex-col gap-6 ">
+        <div className=" flex flex-col gap-6 justify-center items-center">
         <div className={` text-6xl font-semibold overflow-hidden`}>
-            <p className="fromUpside text-white">Welcome</p>
+            <p className="fromUpside text-white">Bienvenue</p>
         </div>
         <div className={` flex text-4xl overflow-hidden`}>
-            <p className="fromDownside text-white">Lorris, Portfolio</p>
+            <p className="fromDownside text-white">Portfolio de Lorris</p>
         </div>
 
         </div>
