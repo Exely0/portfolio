@@ -51,6 +51,9 @@ module.exports = {
 
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   extend: {
     screens: {
       'hover-hover': {'raw': '(hover: hover)'},

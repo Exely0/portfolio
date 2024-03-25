@@ -1,5 +1,8 @@
 import { useState, } from "react";
 
+import "../styles/anim.css"
+
+
 import leftArrow from "../images/arrow-left.png"
 import rightArrow from "../images/arrow-right.png"
 
@@ -66,6 +69,8 @@ function ProjectsV4() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [showOverlay, setShowOverlay] = useState(false);
     const [showDetailedContent, setShowDetailedContent] = useState([false, false, false]);
+    const [onClickArrowRightAnim, setOnClickArrowRightAnim] = useState(false)
+    const [onClickArrowLeftAnim, setOnClickArrowLeftAnim] = useState(false)
 
 
     const showDetails = (index) => {
@@ -97,6 +102,21 @@ function ProjectsV4() {
     const forcedUpdateImageIndexValue = (value) => {
         setCurrentImageIndex(value)
     }
+
+    const OnClickStyleEffect = (element) => {
+        if (element === "arrow-right") {
+          setOnClickArrowRightAnim(true)
+          setTimeout(() => {
+            setOnClickArrowRightAnim(false)
+          }, 500);
+        }
+        else if (element === "arrow-left") {
+            setOnClickArrowLeftAnim(true)
+            setTimeout(() => {
+                setOnClickArrowLeftAnim(false)
+            }, 500);
+        }
+      }
 
 
     return (
@@ -147,10 +167,10 @@ function ProjectsV4() {
                         </div>
 
                         <div className=" md:hidden flex h-11 w-full mb-4">
-                            <div onClick={ () => updateImageIndexValue('down', imageCollection.length)} className=" py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => {updateImageIndexValue('down', imageCollection.length); OnClickStyleEffect("arrow-left")}} className={` ${onClickArrowLeftAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer`}>
                                 {"<"}
                             </div>
-                            <div onClick={ () => updateImageIndexValue('up', imageCollection.length)} className=" py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => {updateImageIndexValue('up', imageCollection.length); OnClickStyleEffect("arrow-right")}} className={` ${onClickArrowRightAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer`}>
                                 {">"}
                             </div>
                         </div>

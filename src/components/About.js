@@ -2,12 +2,18 @@ import ArrowDown from "../images/arrow-down.png"
 import CV from "../images/CV/cv-lorris.pdf"
 import Bio from "../images/Dessin/Bio.jpg"
 
+import "../styles/anim.css"
+
+
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import SmoothScroll from 'smooth-scroll';
 
 function About() {
+
+  const [seeMore, setSeeMore] = useState(false)
+  const [download, setDownload] = useState(false)
 
   const stringsSec2 = [
     "Je suis étudiant en licence d'informatique depuis 3 ans à l'Université de Limoges.",
@@ -61,6 +67,20 @@ function About() {
     }
   };
 
+  const OnClickStyleEffect = (element) => {
+    if (element === "see-more") {
+      setSeeMore(true)
+      setTimeout(() => {
+        setSeeMore(false)
+      }, 500);
+    }
+    else if (element === "download") {
+      setDownload(true)
+      setTimeout(() => {
+        setDownload(false)
+      }, 500);
+    }
+  }
 
 
   return (
@@ -77,7 +97,7 @@ function About() {
             <div className= " bg-red w-auto px-6 sm:px-10 py-4 text-white text-3xl sm:text-4xl md:text-5xl  text-center font-semibold" style={{ transform: `translateY(${-3/5*scrollOffset}px)` }}>
               créer des sites web
             </div>
-            <div style={{ transform: `translateY(${-2/5*scrollOffset}px)` }} onClick={scrollToSection2} className=" mt-36 w-[300px] hover:cursor-pointer hover:bg-red transition-colors flex gap-8 items-center justify-center border py-2 px-4">
+            <div style={{ transform: `translateY(${-2/5*scrollOffset}px)` }} onClick={() => {scrollToSection2(); OnClickStyleEffect("see-more");}} className={` ${seeMore ? "bg-color-onclick-anim" : ""} mt-36 w-[300px] hover:cursor-pointer hover:bg-red transition-colors flex gap-8 items-center justify-center border py-2 px-4`}>
               <div className=" min-w-fit">
                 <img alt="arrow" className=" w-full h-auto" src={ArrowDown} />
               </div>
@@ -94,7 +114,7 @@ function About() {
                 {str}
               </div>
             ))}
-            <a href={CV} download="cv_lorris" style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={` !mt-24 mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:bg-red transition-colors`}>
+            <a href={CV} download="cv_lorris" onClick={() => OnClickStyleEffect("download")} style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={`${download ? "bg-color-onclick-anim" : ""}!mt-24 mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:bg-red transition-all`}>
               Télécharger mon CV
             </a>
           </div>

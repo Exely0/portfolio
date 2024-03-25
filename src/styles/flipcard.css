@@ -16,6 +16,14 @@
     transform: rotateY(180deg);
 }
 
+
+
 .fp-back {
     transform: rotateY(180deg);
+}
+
+@media (hover: none) {
+    .flipcard-container:active {
+        transform: rotateY(180deg);
+    }
 }
