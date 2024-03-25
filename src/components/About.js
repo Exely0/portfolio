@@ -97,7 +97,7 @@ function About() {
             <div className= " bg-red w-auto px-6 sm:px-10 py-4 text-white text-3xl sm:text-4xl md:text-5xl  text-center font-semibold" style={{ transform: `translateY(${-3/5*scrollOffset}px)` }}>
               créer des sites web
             </div>
-            <div style={{ transform: `translateY(${-2/5*scrollOffset}px)` }} onClick={() => {scrollToSection2(); OnClickStyleEffect("see-more");}} className={` ${seeMore ? "bg-color-onclick-anim" : ""} mt-36 w-[300px] hover:cursor-pointer hover:bg-red transition-colors flex gap-8 items-center justify-center border py-2 px-4`}>
+            <div style={{ transform: `translateY(${-2/5*scrollOffset}px)` }} onClick={() => {scrollToSection2(); OnClickStyleEffect("see-more");}} className={` ${seeMore ? "bg-color-onclick-anim" : ""} mt-36 w-[300px] hover:cursor-pointer hover:!bg-red transition-colors flex gap-8 items-center justify-center border py-2 px-4`}>
               <div className=" min-w-fit">
                 <img alt="arrow" className=" w-full h-auto" src={ArrowDown} />
               </div>
@@ -108,15 +108,18 @@ function About() {
         </div>
         {/*section 2*/}
         <div ref={section2Ref} className=" bg-white px-8 py-8 md:p-0 min-h-screen md:grid grid-cols-[2fr_3fr]">
-          <div className=" col-[2] space-y-6 tracking-wide mt-28 mb-16 sm:mb-0">
+          <div className=" col-[2] tracking-wide mt-28 mb-16 sm:mb-0">
             {stringsSec2.map((str, index) => (
-              <div key={index} className=" text-xl sm:text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
+              <div key={index} className=" mb-6 text-xl sm:text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
                 {str}
               </div>
             ))}
-            <a href={CV} download="cv_lorris" onClick={() => OnClickStyleEffect("download")} style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={`${download ? "bg-color-onclick-anim" : ""}!mt-24 mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:bg-red transition-all`}>
-              Télécharger mon CV
-            </a>
+            <div className=" flex items-center justify-center mt-24">
+              <a href={CV} download="cv_lorris" onClick={() => OnClickStyleEffect("download")} style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={`${download ? "bg-color-onclick-anim" : ""} mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:!bg-red transition-all`}>
+                Télécharger mon CV
+              </a>
+            </div>
+            
           </div>
           <div className=" col-[1] row-[1] h-full w-full flex items-end pb-20">
             <div className=" ">

@@ -163,7 +163,7 @@
   }
 
   .bg-color-onclick-anim {
-    animation: BgColorOnClick 0.5s linear;
+    animation: BgColorOnClick 0.2s linear;
   }
 
   @keyframes BgColorOnClickArrow {
@@ -212,7 +212,7 @@
     0% {
         transform: scale(1);
     }
-    15% {
+    35% {
         transform: scale(0.95);
     }
     100% {
