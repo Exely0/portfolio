@@ -212,7 +212,7 @@
     0% {
         transform: scale(1);
     }
-    50% {
+    15% {
         transform: scale(0.95);
     }
     100% {
