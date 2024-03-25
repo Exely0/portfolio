@@ -35,25 +35,25 @@ function ProjectsV4() {
 
     const projects = [
         { shortString: "Application qui permet de créer une liste de tâches",
-          longString: "La maquette provient du challenge suivant du site Frontendmentor.io : https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW L'application permet d'ajouter des tâches à faire, de les supprimer, et de les afficher sélectivement. Le layout est responsive, et un mode nuit est également disponible. Les technologies utilisées sont Tailwind et React",
+          longString: "La maquette provient du site frontendmentor.io. L'application permet d'ajouter des tâches à faire, de les supprimer, et de les afficher sélectivement. Le layout est responsive, et un mode nuit est également disponible. Les technologies utilisées sont Tailwind et React",
           githubLink: "https://github.com/Exely0/ToDoListApplication", 
           image: ToDoListAppImages[0], 
           imageCollection: ToDoListAppImages },
 
         { shortString : "Formulaire en plusieurs étapes", 
-          longString: "La maquette provient du challenge suivant : https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ C'est un formulaire à remplir en plusieurs étapes, le coût s'ajuste dynamiquement au fur et à mesure que l'utilisateur sélectionne les options. L'application est responsive. Les technologies utilisées sont Tailwind et React", 
+          longString: "La maquette provient du site frontendmentor.io. C'est un formulaire à remplir en plusieurs étapes, le coût s'ajuste dynamiquement au fur et à mesure que l'utilisateur sélectionne les options. L'application est responsive. Les technologies utilisées sont Tailwind et React", 
           githubLink: "https://github.com/Exely0/multi-step-form", 
           image: MSFormsImages[0], 
           imageCollection : MSFormsImages },
     
         { shortString : "Tableau de bord de données", 
-          longString: "La maquette provient de : https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw C'est un layout présentant les données d'un utilisateur, on peut les afficher selon différentes intervalles de temps. Les données sont récupérés dans un fichier JSON. L'application est responsive et les technologies utilisées sont Tailwind et React", 
+          longString: "La maquette provient du site frontendmentor.io. C'est un layout présentant les données d'un utilisateur, on peut les afficher selon différentes intervalles de temps. Les données sont récupérés dans un fichier JSON. L'application est responsive et les technologies utilisées sont Tailwind et React", 
           githubLink: "https://github.com/Exely0/time-tracking-dashboard", 
           image: TTDashImages[0], 
           imageCollection : TTDashImages },
 
         { shortString : "Graphique de dépenses",
-          longString : "La maquette est de : https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt Le graphique affiche les données d'un fichier JSON représentant les dépenses effectuées par une entité. Les technologies utilisées sont JS CSS et HTML. ",
+          longString : "La maquette vient du site frontendmentor.io. Le graphique affiche les données d'un fichier JSON représentant les dépenses effectuées par une entité. Les technologies utilisées sont JS CSS et HTML. ",
           githubLink : "https://github.com/Exely0/ExpensesChartComponent",
           image: ExpChartImages[0],
           imageCollection: ExpChartImages },
@@ -136,7 +136,7 @@ function ProjectsV4() {
 
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-            {projects.map(({shortString, longString, githubLink, image, imageCollection}, index) => ( 
+            {projects.map(({shortString, longString, feMentorLink ,githubLink, image, imageCollection}, index) => ( 
 
                 <div key={index}>
 
