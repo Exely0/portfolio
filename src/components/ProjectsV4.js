@@ -25,16 +25,13 @@ import AssisCrea1 from "../images/AssisstantCreation/AssissCrea1.png"
 import AssisCrea2 from "../images/AssisstantCreation/AssissCrea2.png"
 import AssisCrea3 from "../images/AssisstantCreation/AssissCrea3.png"
 
-
-
-const ToDoListAppImages = [ToDoListApp1, ToDoListApp2, ToDoListApp3, ToDoListApp4]
-const MSFormsImages = [MSForm1, MSForm2, MSForm3, MSForm4]
-const TTDashImages = [TTDash1, TTDash2]
-const ExpChartImages = [ExpChart1]
-const AssisCreaImages = [AssisCrea2, AssisCrea1, AssisCrea3]
-
-
 function ProjectsV4() {
+
+    const ToDoListAppImages = [ToDoListApp1, ToDoListApp2, ToDoListApp3, ToDoListApp4]
+    const MSFormsImages = [MSForm1, MSForm2, MSForm3, MSForm4]
+    const TTDashImages = [TTDash1, TTDash2]
+    const ExpChartImages = [ExpChart1]
+    const AssisCreaImages = [AssisCrea2, AssisCrea1, AssisCrea3]
 
     const projects = [
         { shortString: "Application qui permet de créer une liste de tâches",
@@ -71,6 +68,7 @@ function ProjectsV4() {
     const [showDetailedContent, setShowDetailedContent] = useState([false, false, false]);
     const [onClickArrowRightAnim, setOnClickArrowRightAnim] = useState(false)
     const [onClickArrowLeftAnim, setOnClickArrowLeftAnim] = useState(false)
+    const [scaleDivAnim, setScaleDivAnim] = useState(Array(projects.length).fill(false));
 
 
     const showDetails = (index) => {
@@ -116,14 +114,24 @@ function ProjectsV4() {
                 setOnClickArrowLeftAnim(false)
             }, 500);
         }
-      }
+    }
+    
+    const handleProjectsDivClickAnim = (index) => {
+        const updatedScaleDivAnim = [...scaleDivAnim];
+        updatedScaleDivAnim[index] = true;
+        setScaleDivAnim(updatedScaleDivAnim)
+        setTimeout(() => {
+            updatedScaleDivAnim[index] = false
+            setScaleDivAnim(updatedScaleDivAnim)
+        }, 500);
+    }
 
 
     return (
         <div className="w-full flex flex-col gap-8 px-10 py-8">
 
             <div className=" hidden md:flex justify-center items-center bg-blue -mx-8 h-28 ">
-                <h1 className="text-white font-semibold text-4xl text-slate-200">Mes projets</h1>
+                <h1 className="hidden md:block text-white font-semibold text-4xl">Mes projets</h1>
             </div>
 
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -135,7 +143,7 @@ function ProjectsV4() {
                     <div onClick={ () => closeDetails()} className={` fixed top-0 left-0 w-full h-full bg-overlay z-10 ${!showOverlay ? "hidden" : ""}`}>
                     </div>
 
-                    <div onClick={ () => showDetails(index)} className=" hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[350px] hover:scale-105 active:scale-95 transition-all">
+                    <div onClick={ () => {showDetails(index); handleProjectsDivClickAnim(index)}} className={`${scaleDivAnim[index] ? "scale-down" : ""} hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[350px] hover:scale-105 transition-all`}>
                         <div className=" rounded-lg w-full h-2/3">
                             <img src={image} alt="" className=" rounded-lg h-full w-full object-cover "/>
                         </div>
@@ -147,9 +155,9 @@ function ProjectsV4() {
                         </div>
                     </div>
 
-                    <div className={` fixed max-h-[550px] md:max-h-[650px] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
+                    <div className={` fixed max-h-[550px] md:max-h-[650px] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] md:rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
                         <div className=" flex h-[400px] mb-3">
-                            <div onClick={ () => updateImageIndexValue('down', imageCollection.length)} className="hidden md:block grow transition-all bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => {updateImageIndexValue('down', imageCollection.length); OnClickStyleEffect("arrow-left")}} className={`${onClickArrowLeftAnim ? "bg-color-onclick-anim-arrow-desk" : ""} hidden md:block grow transition-all bg-white h-full hover:bg-[#CECECE] hover:cursor-pointer`}>
                                 <img alt="arrow left" className=" w-full h-full scale-50" src={leftArrow}/>
                             </div>
                             <div className="h-full overflow-hidden md:w-[650px] w-full">
@@ -161,7 +169,7 @@ function ProjectsV4() {
                                     ))} 
                                 </div>
                             </div>
-                            <div onClick={ () => updateImageIndexValue('up', imageCollection.length)} className="hidden grow md:block transition-all bg-white h-full hover:bg-overlay hover:cursor-pointer">
+                            <div onClick={ () => {updateImageIndexValue('up', imageCollection.length); OnClickStyleEffect("arrow-right")}} className={`${onClickArrowRightAnim ? "bg-color-onclick-anim-arrow-desk" : ""} hidden grow md:block transition-all bg-white h-full hover:bg-[#CECECE] hover:cursor-pointer`}>
                                 <img alt="arrow right" className=" w-full h-full scale-50" src={rightArrow}/>
                             </div>
                         </div>

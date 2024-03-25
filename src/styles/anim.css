@@ -175,6 +175,52 @@
     }
   }
 
+  @keyframes BgColorOnClickArrowDesk {
+    0% {
+      background-color: grey;
+    }
+    100% {
+      background-color: #CECECE;
+    }
+  }
+
   .bg-color-onclick-anim-arrow {
     animation: BgColorOnClickArrow 0.5s linear;
   }
+
+  .bg-color-onclick-anim-arrow-desk {
+    animation: BgColorOnClickArrowDesk 0.5s linear;
+  }
+
+  @keyframes scaleText {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+  .scale-text {
+    animation: scaleText 0.2s linear;
+  }
+
+  @keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+  .scale-down {
+    animation: scaleDown 0.2s ease-out;
+  }
+
