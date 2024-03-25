@@ -12,10 +12,13 @@
   }
   
   @keyframes fadeOut {
-    from {
+    0% {
       opacity: 1;
     }
-    to {
+    90% {
+      opacity: 0;
+    }
+    100% {
       opacity: 0;
     }
   }
