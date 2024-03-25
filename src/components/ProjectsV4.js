@@ -58,7 +58,7 @@ function ProjectsV4() {
           image: ExpChartImages[0],
           imageCollection: ExpChartImages },
         { shortString : "Aide à la création de carte",
-          longString : "L'application permet de trouver des erreurs dans les cartes d'un jeu vidéo.<br> Cela se fait par reconnaissance de motifs préalablement enregistrés.<br> L'application a été créée avec Electron.",
+          longString : "L'application permet de trouver des erreurs dans les cartes d'un jeu vidéo. Cela se fait par reconnaissance de motifs préalablement enregistrés. L'application a été créée avec Electron.",
           image : AssisCreaImages[0],
           imageCollection : AssisCreaImages },
     ];
