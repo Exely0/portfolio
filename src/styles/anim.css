@@ -185,11 +185,11 @@
   }
 
   .bg-color-onclick-anim-arrow {
-    animation: BgColorOnClickArrow 0.5s linear;
+    animation: BgColorOnClickArrow 0.2s linear;
   }
 
   .bg-color-onclick-anim-arrow-desk {
-    animation: BgColorOnClickArrowDesk 0.5s linear;
+    animation: BgColorOnClickArrowDesk 0.2s linear;
   }
 
   @keyframes scaleText {

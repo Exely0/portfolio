@@ -106,13 +106,13 @@ function ProjectsV4() {
           setOnClickArrowRightAnim(true)
           setTimeout(() => {
             setOnClickArrowRightAnim(false)
-          }, 500);
+          }, 200);
         }
         else if (element === "arrow-left") {
             setOnClickArrowLeftAnim(true)
             setTimeout(() => {
                 setOnClickArrowLeftAnim(false)
-            }, 500);
+            }, 200);
         }
     }
     
