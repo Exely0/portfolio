@@ -51,6 +51,11 @@ module.exports = {
 
     },
   },
+  extend: {
+    screens: {
+      'hover-hover': {'raw': '(hover: hover)'},
+    },
+  },
   plugins: [
     require("@xpd/tailwind-3dtransforms")
   ],

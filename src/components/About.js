@@ -12,8 +12,8 @@ function About() {
   const stringsSec2 = [
     "Je suis étudiant en licence d'informatique depuis 3 ans à l'Université de Limoges.",
     "Il y a de ça 1 an je me suis pris de passion pour le développement web, plus particulièrement le front end.",
-    "Alors j'ai commencé à reproduire des maquettes que je trouvais sur Internet.",
-    "J'aspire plus tard à en faire mon métier, et ainsi devenir un développeur web !",
+    "Alors j'ai commencé à intégrer des maquettes que je trouvais sur Internet.",
+    "J'aspire plus tard à en faire mon métier, et ainsi devenir développeur web !",
   ]
 
   const section2Ref = useRef(null);
@@ -67,17 +67,17 @@ function About() {
     <div className=" w-full">
 
         {/*section 1*/}
-        <div className="relative h-screen pt-10 md:pt-40 flex flex-col items-center" >
-            <div className=" bg-red w-auto px-10 py-4 text-4xl sm:text-5xl text-white md:text-6xl text-center font-semibold" style={{ transform: `translateY(${-5/5*scrollOffset}px)` }}>
+        <div className="h-screen flex flex-col items-center justify-center" >
+            <div className=" bg-red w-auto px-6 sm:px-10 py-4 text-4xl sm:text-5xl text-white md:text-6xl text-center font-semibold" style={{ transform: `translateY(${-5/5*scrollOffset}px)` }}>
               Je m'appelle <span className="  text-red" style={{WebkitTextStroke: "2px white"}}>Lorris</span>
             </div>
-            <div className=" bg-white text-red px-10 py-4 text-3xl md:text-4xl  text-center font-semibold" style={{ transform: `translateY(${-4/5*scrollOffset}px)` }}>
+            <div className=" bg-white text-red px-6 sm:px-10 py-4 text-2xl sm:text-3xl md:text-4xl  text-center font-semibold" style={{ transform: `translateY(${-4/5*scrollOffset}px)` }}>
               et j'aime 
             </div>
-            <div className= " bg-red w-auto px-10 py-4 text-white text-4xl md:text-5xl  text-center font-semibold" style={{ transform: `translateY(${-3/5*scrollOffset}px)` }}>
+            <div className= " bg-red w-auto px-6 sm:px-10 py-4 text-white text-3xl sm:text-4xl md:text-5xl  text-center font-semibold" style={{ transform: `translateY(${-3/5*scrollOffset}px)` }}>
               créer des sites web
             </div>
-            <div style={{ transform: `translateY(${-2/5*scrollOffset}px) translateX(50%)` }} onClick={scrollToSection2} className=" w-[300px] hover:cursor-pointer hover:bg-red transition-colors absolute bottom-40 md:bottom-32 right-1/2 flex gap-8 items-center justify-center border py-2 px-4">
+            <div style={{ transform: `translateY(${-2/5*scrollOffset}px)` }} onClick={scrollToSection2} className=" mt-36 w-[300px] hover:cursor-pointer hover:bg-red transition-colors flex gap-8 items-center justify-center border py-2 px-4">
               <div className=" min-w-fit">
                 <img alt="arrow" className=" w-full h-auto" src={ArrowDown} />
               </div>
@@ -87,10 +87,10 @@ function About() {
             </div>
         </div>
         {/*section 2*/}
-        <div ref={section2Ref} className=" bg-white px-8 py-8 md:p-0 -mx-8 min-h-screen md:grid grid-cols-[2fr_3fr]">
-          <div className=" col-[2] space-y-6 tracking-wide mt-28 pr-14">
+        <div ref={section2Ref} className=" bg-white px-8 py-8 md:p-0 min-h-screen md:grid grid-cols-[2fr_3fr]">
+          <div className=" col-[2] space-y-6 tracking-wide mt-28 mb-16 sm:mb-0">
             {stringsSec2.map((str, index) => (
-              <div key={index} className=" text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
+              <div key={index} className=" text-xl sm:text-2xl" style={{ transform: `translateY(${getSection2Offset(index)}px)`, opacity: getSection2Opacity() }}>
                 {str}
               </div>
             ))}

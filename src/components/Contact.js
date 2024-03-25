@@ -43,8 +43,7 @@ function Contact() {
                         <div onClick={() => handleCopyToClipboard("lorris.pons@gmail.com")} className={`${name!=="Mail" ? "hidden" : ""} w-full h-full flex items-center justify-center hover:cursor-pointer active:scale-110 transition-transform`}><p className=" text-lg">{text}</p></div>
                     </div>
                 </div>
-            ))
-            }
+            ))}
           </div>
         
       </div>
