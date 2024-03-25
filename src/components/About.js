@@ -115,7 +115,7 @@ function About() {
               </div>
             ))}
             <div className=" flex items-center justify-center mt-24">
-              <a href={CV} download="cv_lorris" onClick={() => OnClickStyleEffect("download")} style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={`${download ? "bg-color-onclick-anim" : ""} mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:!bg-red transition-all`}>
+              <a href={CV} download="cv_lorris" onClick={() => OnClickStyleEffect("download")} style={{ transform: `translateY(${getSection2Offset(4)}px)`, opacity: getSection2Opacity() }} className={`${download ? "bg-color-onclick-anim" : ""} mx-auto text-white hover:cursor-pointer flex items-center justify-center max-w-fit px-10 py-5 font-semibold text-lg bg-blue hover:!bg-red transition-colors`}>
                 Télécharger mon CV
               </a>
             </div>

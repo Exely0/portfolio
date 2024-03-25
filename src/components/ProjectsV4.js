@@ -58,7 +58,7 @@ function ProjectsV4() {
           image: ExpChartImages[0],
           imageCollection: ExpChartImages },
         { shortString : "Aide à la création de carte",
-          longString : "L'application permet de trouver des erreurs dans les cartes d'un jeu vidéo. Cela se fait par reconnaissance de patternes préalablement enregistrés. L'application a été créée avec Electron.",
+          longString : "L'application permet de trouver des erreurs dans les cartes d'un jeu vidéo.<br> Cela se fait par reconnaissance de motifs préalablement enregistrés.<br> L'application a été créée avec Electron.",
           image : AssisCreaImages[0],
           imageCollection : AssisCreaImages },
     ];
@@ -155,7 +155,7 @@ function ProjectsV4() {
                         </div>
                     </div>
 
-                    <div className={` fixed max-h-[80vh] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full md:w-[800px] md:rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
+                    <div className={` fixed max-h-[80vh] overflow-auto md:-translate-x-1/2 -translate-y-1/2 top-1/2 left-0 md:top-1/2 md:left-1/2 bg-white z-20 w-full max-w-full md:w-[800px] md:rounded-lg ${!showDetailedContent[index] ? "hidden" : ""}`}>
                         <div className=" flex h-[400px] mb-3">
                             <div onClick={ () => {updateImageIndexValue('down', imageCollection.length); OnClickStyleEffect("arrow-left")}} className={`${onClickArrowLeftAnim ? "bg-color-onclick-anim-arrow-desk" : ""} hidden md:block grow transition-all bg-white h-full hover:bg-[#CECECE] hover:cursor-pointer`}>
                                 <img alt="arrow left" className=" w-full h-full scale-50" src={leftArrow}/>
