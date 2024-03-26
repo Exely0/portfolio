@@ -19,11 +19,10 @@ function About() {
     "Je suis étudiant en licence d'informatique depuis 3 ans à l'Université de Limoges.",
     "Il y a de ça 1 an je me suis pris de passion pour le développement web, plus particulièrement le front end.",
     "Alors j'ai commencé à intégrer des maquettes que je trouvais sur Internet.",
-    "J'aspire plus tard à en faire mon métier, et ainsi devenir développeur web !",
+    "J'aspire plus tard à en faire mon métier, et ainsi devenir développeur web",
   ]
 
   const section2Ref = useRef(null);
-  const [scrollOffset, setScrollOffset] = useState(0);
 
   const scrollToSection2 = () => {
     if (section2Ref.current) {

@@ -69,6 +69,8 @@ function ProjectsV4() {
     const [onClickArrowRightAnim, setOnClickArrowRightAnim] = useState(false)
     const [onClickArrowLeftAnim, setOnClickArrowLeftAnim] = useState(false)
     const [scaleDivAnim, setScaleDivAnim] = useState(Array(projects.length).fill(false));
+    const [scrollOffset, setScrollOffset] = useState(0);
+
 
 
     const showDetails = (index) => {
