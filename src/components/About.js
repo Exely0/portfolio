@@ -87,7 +87,7 @@ function About() {
     <div className=" w-full">
 
         {/*section 1*/}
-        <div className="h-screen flex flex-col items-center justify-center" >
+        <div className="h-screen flex flex-col items-center justify-center -mt-8 sm:mt-0" >
             <div className=" bg-red w-auto px-6 sm:px-10 py-4 text-4xl sm:text-5xl text-white md:text-6xl text-center font-semibold" style={{ transform: `translateY(${-5/5*scrollOffset}px)` }}>
               Je m'appelle <span className="  text-red" style={{WebkitTextStroke: "2px white"}}>Lorris</span>
             </div>

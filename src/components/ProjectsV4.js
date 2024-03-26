@@ -1,6 +1,7 @@
-import { useState, } from "react";
-
-import "../styles/anim.css"
+import { useEffect, useState, } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import "../styles/anim.css";
 
 
 import leftArrow from "../images/arrow-left.png"
@@ -70,6 +71,9 @@ function ProjectsV4() {
     const [onClickArrowLeftAnim, setOnClickArrowLeftAnim] = useState(false)
     const [scaleDivAnim, setScaleDivAnim] = useState(Array(projects.length).fill(false));
 
+    useEffect(() => {
+        Aos.init()
+    })
 
 
     const showDetails = (index) => {
@@ -144,7 +148,7 @@ function ProjectsV4() {
                     <div onClick={ () => closeDetails()} className={` fixed top-0 left-0 w-full h-full bg-overlay z-10 ${!showOverlay ? "hidden" : ""}`}>
                     </div>
 
-                    <div onClick={ () => {showDetails(index); handleProjectsDivClickAnim(index)}} className={`${scaleDivAnim[index] ? "scale-down" : ""} hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[400px] hover:scale-105 transition-all`}>
+                    <div data-aos="fade-up" onClick={ () => {showDetails(index); handleProjectsDivClickAnim(index)}} className={`${scaleDivAnim[index] ? "scale-down" : ""} hover:cursor-pointer bg-white rounded-lg p-5  flex flex-col justify-between h-[340px] lg:h-[400px] hover:scale-105 transition-all`}>
                         <div className=" rounded-lg w-full h-3/5">
                             <img src={image} alt="" className=" rounded-lg h-full w-full object-cover "/>
                         </div>
