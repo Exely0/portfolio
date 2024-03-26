@@ -1,9 +1,6 @@
 import "../styles/flipcard.css"
 import "../styles/anim.css"
 
-
-import { useState } from "react"
-
 import MailImage from "../images/RS/mail-logo.png"
 import GithubImage from "../images/RS/github-logo.png"
 import LinkedinImage from "../images/RS/linkedin-logo.png"
