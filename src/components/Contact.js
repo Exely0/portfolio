@@ -45,17 +45,19 @@ function Contact() {
           </div>
             <div className=" flex flex-wrap md:flex-row gap-6 h-full items-center justify-center md:perspective-800">
             {Contacts.map(({name, image, link, text}, index) => (
-                    <div key = {index} className={`h-60 w-60 relative mb-6 rounded-lg flipcard-container`} >
-                        <div className={` rounded-lg duration-500 absolute top-0 left-0 w-full h-full bg-white flipcard`} title=" front">
-                            <img alt="name" src={image} className=" w-full h-full object-cover"/>
-                        </div>
-                        <div className={` px-8 flex items-center justify-center rounded-lg duration-500 absolute top-0 left-0 w-full h-full bg-white flipcard fp-back`} title=" back">
-                            <a href={link} target="_blank" rel="noreferrer" className={`${name==="Mail" ? "hidden" : ""} w-full h-full flex items-center justify-center`}>
-                                <div className=" text-lg">{text}</div>
-                            </a>
-                            <div onClick={() => {handleCopyToClipboard("lorris.pons@gmail.com"); handleScaleTextAnim()}} className={`${name!=="Mail" ? "hidden" : ""} ${scaleTextAnime ? "scale-text" : ""} w-full h-full flex items-center justify-center hover:cursor-pointer transition-transform`}><p className=" text-lg">{text}</p></div>
-                        </div>
+                <div>
+                <div key = {index} className={`h-60 w-60 relative mb-6 rounded-lg flipcard-container`} >
+                    <div className={` rounded-lg duration-500 absolute top-0 left-0 w-full h-full bg-white flipcard`} title=" front">
+                        <img alt="name" src={image} className=" w-full h-full object-cover"/>
                     </div>
+                    <div className={` px-8 flex items-center justify-center rounded-lg duration-500 absolute top-0 left-0 w-full h-full bg-white flipcard fp-back`} title=" back">
+                        <a href={link} target="_blank" rel="noreferrer" className={`${name==="Mail" ? "hidden" : ""} w-full h-full flex items-center justify-center`}>
+                            <div className=" text-lg">{text}</div>
+                        </a>
+                        <div onClick={() => {handleCopyToClipboard("lorris.pons@gmail.com"); handleScaleTextAnim()}} className={`${name!=="Mail" ? "hidden" : ""} ${scaleTextAnime ? "scale-text" : ""} w-full h-full flex items-center justify-center hover:cursor-pointer transition-transform`}><p className=" text-lg">{text}</p></div>
+                    </div>
+                </div>
+                </div>
             ))}
             </div>
       </div>

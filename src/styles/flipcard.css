@@ -12,16 +12,14 @@
     transition: 1s;
 }
 
-.flipcard-container:hover {
-    transform: rotateY(180deg);
-}
-
 .fp-back {
     transform: rotateY(180deg);
 }
 
-@media (hover: none) {
-    .flipcard-container:active {
-        transform: rotateY(180deg);
-    }
+.flipcard-container:hover {
+    transform: rotateY(180deg);
+}
+
+.flipcard-container:active {
+    transform: rotateY(180deg);
 }
