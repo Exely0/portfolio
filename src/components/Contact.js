@@ -9,7 +9,7 @@ import LinkedinImage from "../images/RS/linkedin-logo.png"
 function Contact() {
 
     const Contacts = [
-        {name: "Mail", image: MailImage, link: "mailto:lorris.pons@gmail.com", text: "Contactez moi à l'adresse suivante : lorris.pons@gmail.com (cliquez pour copier)"},
+        {name: "Mail", image: MailImage, link: "mailto:lorris.pons@gmail.com", text: "Cliquez pour envoyer un mail à l'adresse suivante: lorris.pons@gmail.com"},
         {name: "Linkedln", image: LinkedinImage, link: "https://www.linkedin.com/in/lorris-pons-5180502a9/", text: "Cliquez pour visiter mon profil LinkedIn"},
         {name: "Github", image: GithubImage, link: "https://github.com/Exely0/", text: "Cliquez pour visiter mon profil Github"},  
     ]
