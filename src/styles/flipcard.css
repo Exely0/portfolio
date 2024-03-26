@@ -16,10 +16,23 @@
     transform: rotateY(180deg);
 }
 
-.flipcard-container:hover {
-    transform: rotateY(180deg);
+@media (hover : hover){
+    .flipcard-container:hover {
+        transform: rotateY(180deg);
+    }
+    .mobile-fallback-for-flipcards {
+        display: none;
+    }
 }
 
-.flipcard-container:active {
-    transform: rotateY(180deg);
+@media (hover : none){
+
+    .mobile-fallback-for-flipcards {
+        display: block;
+    }
 }
+
+
+
+
+
