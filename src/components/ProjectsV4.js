@@ -169,7 +169,7 @@ function ProjectsV4() {
                                 <div className={` h-full flex -z-10 transition-transform duration-200`} style={{ transform: `translateX(-${100*currentImageIndex}%)` }}>
                                     {imageCollection.map((image, index) => (
                                     <div key={index} className=" w-full md:w-[650px] shrink-0">
-                                        <img alt="screenshot" className=" w-full h-full object-cover" src={image} />
+                                        <img alt="screenshot" className="h-full w-full object-contain" src={image} />
                                     </div>
                                     ))} 
                                 </div>
