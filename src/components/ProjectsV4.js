@@ -180,10 +180,10 @@ function ProjectsV4() {
                         </div>
 
                         <div className=" md:hidden flex h-11 w-full mb-4">
-                            <div onClick={ () => {updateImageIndexValue('down', imageCollection.length); OnClickStyleEffect("arrow-left")}} className={` ${onClickArrowLeftAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer`}>
+                            <div onClick={ () => {updateImageIndexValue('down', imageCollection.length); OnClickStyleEffect("arrow-left")}} className={` ${onClickArrowLeftAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-[#CECECE] hover:cursor-pointer`}>
                                 {"<"}
                             </div>
-                            <div onClick={ () => {updateImageIndexValue('up', imageCollection.length); OnClickStyleEffect("arrow-right")}} className={` ${onClickArrowRightAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-overlay hover:cursor-pointer`}>
+                            <div onClick={ () => {updateImageIndexValue('up', imageCollection.length); OnClickStyleEffect("arrow-right")}} className={` ${onClickArrowRightAnim ? "bg-color-onclick-anim-arrow" : ""} py-2 text-center text-xl font-bold transition-all grow bg-white h-full hover:bg-[#CECECE] hover:cursor-pointer`}>
                                 {">"}
                             </div>
                         </div>
