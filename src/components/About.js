@@ -10,10 +10,10 @@ import SmoothScroll from 'smooth-scroll';
 function About() {
 
   const stringsSec2 = [
-    "Je suis étudiant en licence d'informatique depuis 3 ans à l'Université de Limoges.",
-    "Il y a de ça 1 an je me suis pris de passion pour le développement web, plus particulièrement le front end.",
+    "Je suis étudiant à l'école Epitech dans le parcours PreMsc.",
+    "Il y a 2 ans je me suis pris de passion pour le développement web pendant ma licence d'informatique, plus particulièrement le front end.",
     "Alors j'ai commencé à reproduire des maquettes que je trouvais sur Internet.",
-    "J'aspire plus tard à en faire mon métier, et ainsi devenir un développeur web !",
+    "J'aspire plus tard à en faire mon métier, et ainsi devenir un développeur web.",
   ]
 
   const section2Ref = useRef(null);
