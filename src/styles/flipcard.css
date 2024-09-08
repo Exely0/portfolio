@@ -12,10 +12,27 @@
     transition: 1s;
 }
 
-.flipcard-container:hover {
-    transform: rotateY(180deg);
-}
-
 .fp-back {
     transform: rotateY(180deg);
 }
+
+@media (hover : hover){
+    .flipcard-container:hover {
+        transform: rotateY(180deg);
+    }
+    .mobile-fallback-for-flipcards {
+        display: none;
+    }
+}
+
+@media (hover : none){
+
+    .mobile-fallback-for-flipcards {
+        display: block;
+    }
+}
+
+
+
+
+

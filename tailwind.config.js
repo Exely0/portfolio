@@ -5,11 +5,6 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
-  extend: {
-    fontFamily: {
-      roboto: ["Roboto"]
-    },
-  },
   theme: {
     backgroundColor: {
       'blue': 'rgba(23,86,118,1)',
@@ -17,7 +12,7 @@ module.exports = {
       'red': 'rgba(125,29,63,1)',
       'green': '#0CCA4A',
       'yellow': '#FFA400',
-      'white': '#FFFFFF',
+      'white': '#F2F2F2',
       'overlay': 'rgba(0, 0, 0, 0.1)'
 
     },
@@ -28,7 +23,7 @@ module.exports = {
       'red': 'rgba(125,29,63,1)',
       'green': '#0CCA4A',
       'yellow': '#FFA400',
-      'white': '#FFFFFF',
+      'white': '#F2F2F2',
       'overlay': 'rgba(0, 0, 0, 0.1)'
 
     },
@@ -49,6 +44,14 @@ module.exports = {
       'gradient-green-yellow-diag': 'linear-gradient(120deg, #0CCA4A  50%, #FFA400 50%)',
       'gradient-yellow-green-diag': 'linear-gradient(60deg, #FFA400  50%, #0CCA4A 50%)',
 
+    },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  extend: {
+    screens: {
+      'hover-hover': {'raw': '(hover: hover)'},
     },
   },
   plugins: [
